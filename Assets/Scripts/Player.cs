@@ -79,11 +79,7 @@ public class Player : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
             characterController.Move(move * Time.deltaTime * speed);
         }
-
-        /*if (Input.GetKey(KeyCode.Z) && hasBall)
-        {
-            KickBall();
-        }*/
+        
 
         if (Input.GetKey(KeyCode.Z))
         {
@@ -110,8 +106,7 @@ public class Player : MonoBehaviour
 
     void KickBall()
     {
-        //Debug.Log("shoot!");
-        ball.Kick(_direction);
+        ball.Kick(this.transform.position);
         hasBall = false;
     }
 

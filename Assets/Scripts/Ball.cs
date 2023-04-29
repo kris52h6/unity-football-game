@@ -6,6 +6,8 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     public Rigidbody body;
+    public float kickSpeed = 20f;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 6)
@@ -22,16 +24,12 @@ public class Ball : MonoBehaviour
         }
     }
 
-    public void Kick(float direction)
+    public void Kick(Vector3 kickDirection)
     {
-        Debug.Log("Shoot!");
-        Debug.Log(direction);
+        Vector3 deltaPosition = body.transform.position - kickDirection;
 
-        var deltaPosition = body.transform.position;
-
-        var forward = deltaPosition.normalized;
-        //var forward = direction.normalized;
-        body.AddForce(forward * 20f, ForceMode.Impulse);
+        Vector3 forward = deltaPosition.normalized;
+        body.AddForce(forward * kickSpeed, ForceMode.Impulse);
 
     }
 }
