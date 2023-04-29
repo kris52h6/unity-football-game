@@ -16,10 +16,14 @@ public class Player : MonoBehaviour
     public Animator animator;
 
     public TMP_Text textField;
-    
-    
-    [Header("Move properties")]
-    public float speed = 7f;
+
+
+    [Header("Move properties")] 
+    public float defaultSpeed = 7f;
+
+    public float speed;
+
+    public float sprintSpeed = 20f;
 
     public float turnSmoothTime = 0.1f;
     public float turnSmoothVelocity;
@@ -91,6 +95,15 @@ public class Player : MonoBehaviour
             {
                 Debug.Log("doesnt have ball");
             }
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = sprintSpeed;
+        }
+        else
+        {
+            speed = defaultSpeed;
         }
 
 
