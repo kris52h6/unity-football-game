@@ -91,10 +91,6 @@ public class Player : MonoBehaviour
             {
                 KickBall();
             }
-            else
-            {
-                Debug.Log("doesnt have ball");
-            }
         }
 
         if (Input.GetKey(KeyCode.LeftShift))
@@ -119,7 +115,7 @@ public class Player : MonoBehaviour
 
     void KickBall()
     {
-        ball.Kick(this.transform.position);
+        ball.Kick(transform.position);
         hasBall = false;
     }
 
