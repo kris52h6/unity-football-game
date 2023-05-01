@@ -82,6 +82,17 @@ public class Player : MonoBehaviour
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, _direction, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
             characterController.Move(move * Time.deltaTime * speed);
+            
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                speed = sprintSpeed;
+                animator.SetBool("Sprinting", true);
+            }
+            else
+            {
+                speed = defaultSpeed;
+                animator.SetBool("Sprinting", false);
+            }
         }
         
 
@@ -93,14 +104,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            speed = sprintSpeed;
-        }
-        else
-        {
-            speed = defaultSpeed;
-        }
+        
 
 
     }
