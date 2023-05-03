@@ -1,5 +1,6 @@
 using System;
 using System.Text.RegularExpressions;
+using Cinemachine;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEditor.Search;
@@ -41,6 +42,8 @@ public class Player : MonoBehaviour
     private Quaternion startRotation;
     private Quaternion currentPosition;
     private bool dead;
+
+    public CinemachineVirtualCamera CinemachineVirtualCamera;
     
 
     private AudioSource _audioSource;
@@ -55,6 +58,8 @@ public class Player : MonoBehaviour
         ballPosition = tmp.transform;
         //ball = gameObject.GetComponent<Ball>();
         _audioSource = GetComponentInChildren<AudioSource>();
+
+
     }
     
     
@@ -96,17 +101,14 @@ public class Player : MonoBehaviour
         }
         
 
-        if (Input.GetKey(KeyCode.Z))
+        if (Input.GetKey(KeyCode.Space))
         {
             if (hasBall)
             {
                 KickBall();
             }
         }
-
         
-
-
     }
 
     void GetBall()
@@ -120,6 +122,7 @@ public class Player : MonoBehaviour
     void KickBall()
     {
         ball.Kick(transform.position);
+        _audioSource.Play();
         hasBall = false;
     }
 

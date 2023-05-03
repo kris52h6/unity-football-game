@@ -18,9 +18,19 @@ public class MainGameController : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void Play()
+    public void PlayLevelOne()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Level1");
+    }
+    
+    public void PlayLevelTwo()
+    {
+        SceneManager.LoadScene("Level2");
+    }
+    
+    public void PlayLevelThree()
+    {
+        SceneManager.LoadScene("Level3");
     }
 
     public void QuitGame()

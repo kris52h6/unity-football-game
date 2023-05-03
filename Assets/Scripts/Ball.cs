@@ -38,7 +38,7 @@ public class Ball : MonoBehaviour
 
     IEnumerator ResetCoroutine()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         transform.position = startPosition; 
     }
     
