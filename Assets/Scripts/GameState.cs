@@ -14,7 +14,6 @@ namespace DefaultNamespace
             Level level2 = new Level("Level2");
             Level level3 = new Level("Level3");
             Level[] list = { level1, level2, level3 };
-            //Level[] list = new Level[];
             list.Append(level1);
             list.Append(level2);
             list.Append(level3);

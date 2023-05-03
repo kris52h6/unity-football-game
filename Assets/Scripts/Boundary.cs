@@ -12,9 +12,4 @@ public class Boundary : MonoBehaviour
         ball.OutOfBounds();
     }
 
-    /*private void OnTriggerEnter(Collider other)
-    {
-        Ball ball = other.gameObject.GetComponent<Ball>();
-        ball.OutOfBounds();
-    }*/
 }

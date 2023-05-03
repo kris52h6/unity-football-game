@@ -25,7 +25,6 @@ public class MainGameController : MonoBehaviour
         {
             LoadMainMenu();
         }
-        //Debug.Log(GameState.Level1);
     }
 
     public void LoadMainMenu()

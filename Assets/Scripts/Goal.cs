@@ -17,17 +17,14 @@ public class Goal : MonoBehaviour
     public void GoalScored()
     {
         StartCoroutine(CameraController.FollowPlayerCoroutine());
-        Debug.Log(SceneManager.GetActiveScene().name);
         GameState.SetLevelCompletedByName(SceneManager.GetActiveScene().name);
         StartCoroutine(LevelCompletedCoroutine());
-
     }
 
     public IEnumerator LevelCompletedCoroutine()
     {
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene("MainMenu");
-
     }
 
     
