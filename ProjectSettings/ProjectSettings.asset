@@ -706,11 +706,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: 503eafd6-6a45-4d30-ac63-0f87d07c3090
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: football-game
+  organizationId: khadberg
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
