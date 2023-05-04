@@ -7,6 +7,8 @@
 - 'Streaker' optional feature implemented
 
 ## Controls
-- **WASD** or **Arrow keys** to move
-- **Spacebar** to kick the ball (when player is in control of the ball)
-- **Shift** to sprint
+> **WASD** or **Arrow keys** to move
+>
+> **Spacebar** to kick the ball (when player is in control of the ball)
+>
+> **Shift** to sprint
