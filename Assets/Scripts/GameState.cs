@@ -27,7 +27,6 @@ namespace DefaultNamespace
             {
                 if (Levels[i].LevelName == levelName)
                 {
-                    Debug.Log("happened");
                     Levels[i].LevelCompleted = true;
                 }
             }
@@ -39,7 +38,6 @@ namespace DefaultNamespace
             {
                 if (Levels[i].LevelName == levelName)
                 {
-                    Debug.Log(Levels[i].LevelCompleted);
                     return Levels[i].LevelCompleted;
                 }
             }

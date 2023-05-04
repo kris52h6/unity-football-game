@@ -12,16 +12,10 @@ public class CameraController : MonoBehaviour
     public Player player;
 
     public Ball ball;
-    // Start is called before the first frame update
+
     void Start()
     {
         _defaultRotation = cinemachineVirtualCamera.transform.rotation;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     
     public IEnumerator FollowPlayerCoroutine()
@@ -37,7 +31,5 @@ public class CameraController : MonoBehaviour
         cinemachineVirtualCamera.transform.rotation = _defaultRotation;
         cinemachineVirtualCamera.m_Lens.FieldOfView = 60;
         player.animator.SetBool("Goal", false);
-
-
     }
 }

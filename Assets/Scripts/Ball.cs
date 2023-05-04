@@ -22,7 +22,6 @@ public class Ball : MonoBehaviour
 
     public void Kick(Vector3 kickDirection)
     {
-        Debug.Log(kickDirection);
         Vector3 deltaPosition = body.transform.position - kickDirection;
 
         Vector3 forward = deltaPosition.normalized;

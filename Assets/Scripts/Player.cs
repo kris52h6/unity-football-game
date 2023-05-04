@@ -36,34 +36,16 @@ public class Player : MonoBehaviour
     public Ball ball;
 
     private float _direction;
-
-    public float respawnTime = 2;
-    private Vector3 startPoint;
-    private Quaternion startRotation;
-    private Quaternion currentPosition;
-    private bool dead;
-
-    public CinemachineVirtualCamera CinemachineVirtualCamera;
     
-
     private AudioSource _audioSource;
-   
-    // Start is called before the first frame update
+    
     void Start()
     {
-        startPoint = characterController.gameObject.transform.position;
-        startRotation = new Quaternion(0f, 90f, 0f, 0);
-        currentPosition = characterController.gameObject.transform.rotation;
         var tmp = characterController.gameObject.transform.GetChild(1).gameObject;
         ballPosition = tmp.transform;
-        //ball = gameObject.GetComponent<Ball>();
         _audioSource = GetComponentInChildren<AudioSource>();
-
-
     }
     
-    
-    // Update is called once per frame
     void Update()
     {
         animator.SetBool("Running", false);
@@ -75,7 +57,6 @@ public class Player : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        
         
         if (horizontal !=  0 || vertical != 0)
         {
@@ -100,7 +81,6 @@ public class Player : MonoBehaviour
             }
         }
         
-
         if (Input.GetKey(KeyCode.Space))
         {
             if (hasBall)
@@ -126,13 +106,4 @@ public class Player : MonoBehaviour
         hasBall = false;
     }
 
-    public Vector3 Position
-    { 
-        get => characterController.gameObject.transform.position;
-    }
-
-    public float Speed
-    {
-        get => Mathf.Abs(_movement.x) + Mathf.Abs(_movement.z) / 2;
-    }
 }

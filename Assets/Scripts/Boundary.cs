@@ -7,7 +7,6 @@ public class Boundary : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-
         Ball ball = collision.gameObject.GetComponent<Ball>();
         ball.OutOfBounds();
     }
