@@ -1429,9 +1429,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cinemachineVirtualCamera: {fileID: 156264153}
-  _audioSource: {fileID: 1046144308}
+  audioSource: {fileID: 209408821}
   player: {fileID: 452289584}
-  ball: {fileID: 1529290960}
+  ball: {fileID: 15160896}
 --- !u!4 &209408820
 Transform:
   m_ObjectHideFlags: 0
@@ -1460,7 +1460,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 240ecfa439f3eb14bb00d5982ec4e764, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.014
+  m_Volume: 0.034
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3780,13 +3780,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741678246}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab18d840eec981e42a4475c19e655435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cinemachineVirtualCamera: {fileID: 156264153}
-  _audioSource: {fileID: 0}
+  audioSource: {fileID: 0}
   player: {fileID: 0}
   ball: {fileID: 0}
 --- !u!1 &742279451
@@ -4045,13 +4045,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832567941}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab18d840eec981e42a4475c19e655435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cinemachineVirtualCamera: {fileID: 156264153}
-  _audioSource: {fileID: 0}
+  audioSource: {fileID: 0}
   player: {fileID: 0}
   ball: {fileID: 0}
 --- !u!114 &832567944

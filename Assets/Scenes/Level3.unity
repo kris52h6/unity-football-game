@@ -1429,7 +1429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cinemachineVirtualCamera: {fileID: 156264153}
-  _audioSource: {fileID: 1046144308}
+  audioSource: {fileID: 209408821}
   player: {fileID: 452289584}
   ball: {fileID: 1529290960}
 --- !u!4 &209408820
@@ -1460,7 +1460,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 240ecfa439f3eb14bb00d5982ec4e764, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.014
+  m_Volume: 0.034
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3771,7 +3771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cinemachineVirtualCamera: {fileID: 156264153}
-  _audioSource: {fileID: 0}
+  audioSource: {fileID: 0}
   player: {fileID: 0}
   ball: {fileID: 0}
 --- !u!1 &742279451
@@ -5148,6 +5148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7705e55f05e157343b158e00694e58ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level2Button: {fileID: 0}
+  level3Button: {fileID: 0}
 --- !u!4 &1189223725
 Transform:
   m_ObjectHideFlags: 0

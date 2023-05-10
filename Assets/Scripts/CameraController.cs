@@ -7,7 +7,9 @@ public class CameraController : MonoBehaviour
 {
     public CinemachineVirtualCamera cinemachineVirtualCamera;
     private Quaternion _defaultRotation;
-    public AudioSource _audioSource;
+    private Vector3 _defaultPosition;
+    public AudioSource audioSource;
+    private bool _cameraToggle;
     
     public Player player;
 
@@ -15,13 +17,23 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
+        cinemachineVirtualCamera = GameObject.Find("CAM").GetComponent<CinemachineVirtualCamera>();
         _defaultRotation = cinemachineVirtualCamera.transform.rotation;
+        _defaultPosition = cinemachineVirtualCamera.transform.position;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            ToggleCamera();
+        }
     }
     
     public IEnumerator FollowPlayerCoroutine()
     {
         player.animator.SetBool("Goal", true);
-        _audioSource.Play();
+        audioSource.Play();
         cinemachineVirtualCamera.LookAt = player.transform;
         cinemachineVirtualCamera.Follow = player.transform;
         cinemachineVirtualCamera.m_Lens.FieldOfView = 20;
@@ -31,5 +43,20 @@ public class CameraController : MonoBehaviour
         cinemachineVirtualCamera.transform.rotation = _defaultRotation;
         cinemachineVirtualCamera.m_Lens.FieldOfView = 60;
         player.animator.SetBool("Goal", false);
+    }
+
+    void ToggleCamera()
+    {
+        _cameraToggle = (_cameraToggle) ? _cameraToggle = false : _cameraToggle = true;
+        if (_cameraToggle)
+        {
+            cinemachineVirtualCamera.Follow = player.transform;
+        }
+        else 
+        {
+             cinemachineVirtualCamera.Follow = ball.transform;
+             cinemachineVirtualCamera.transform.position = _defaultPosition;
+             cinemachineVirtualCamera.transform.rotation = _defaultRotation;
+        }
     }
 }
