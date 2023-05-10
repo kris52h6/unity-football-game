@@ -10,6 +10,7 @@ public class MainGameController : MonoBehaviour
 {
     public Button level2Button;
     public Button level3Button;
+    public Button level4Button;
     void Start()
     {
         if (SceneManager.GetActiveScene().name != "MainMenu")
@@ -18,6 +19,7 @@ public class MainGameController : MonoBehaviour
         }
         level2Button.interactable = GameState.GetLevelCompletedByName("Level1");
         level3Button.interactable = GameState.GetLevelCompletedByName("Level2");
+        level4Button.interactable = GameState.GetLevelCompletedByName("Level3");
     }
     void Update()
     {
@@ -50,6 +52,14 @@ public class MainGameController : MonoBehaviour
         if (GameState.GetLevelCompletedByName("Level2"))
         {
             SceneManager.LoadScene("Level3");
+        }
+    }
+
+    public void PlayLevelFour()
+    {
+        if (GameState.GetLevelCompletedByName("Level3"))
+        {
+            SceneManager.LoadScene("Level4");
         }
     }
 
